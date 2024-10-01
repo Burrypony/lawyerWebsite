@@ -3,24 +3,23 @@ import { Button } from "@/components/ui/button";
 // import { FireIcon, MenuIcon } from '@/icons';
 import {
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+  // DropdownMenuContent,
+  // DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
 export default function Header() {
-  const { setTheme } = useTheme();
+  // const { setTheme } = useTheme();
 
   return (
     <div className="max-w-screen-2xl m-auto w-full px-3 sm:px-8 lg:px-16 xl:px-32 flex items-center justify-between py-4">
       <div className="flex items-center justify-start gap-2 min-[375px]:gap-4 lg:gap-0">
         <Button
-          variant="text"
-          size="xsmall"
-          iconOnly
+          variant="default"
+          size="sm"
           aria-label="Menu"
           className="lg:hidden"
         >
@@ -30,13 +29,13 @@ export default function Header() {
       <div className="hidden gap-10 md:flex">
         <div className="hidden gap-8 lg:flex">
           <Button variant="link">Feature</Button>
-          <Button variant="link" href="/about">
+          <Button variant="link">
             About
           </Button>
-          <Button variant="link" href="/pricing">
+          <Button variant="link" >
             Pricing
           </Button>
-          <Button variant="link" href="/contact">
+          <Button variant="link">
             Contact
           </Button>
         </div>
@@ -50,7 +49,7 @@ export default function Header() {
             <span className="sr-only">Toggle theme</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        {/* <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={() => setTheme("light")}>
             Light
           </DropdownMenuItem>
@@ -60,7 +59,7 @@ export default function Header() {
           <DropdownMenuItem onClick={() => setTheme("system")}>
             System
           </DropdownMenuItem>
-        </DropdownMenuContent>
+        </DropdownMenuContent> */}
       </DropdownMenu>
     </div>
   );
