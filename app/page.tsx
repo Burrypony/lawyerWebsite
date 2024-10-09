@@ -1,6 +1,7 @@
 // import Image from "next/image";
 import Header from "@/components/header/header";
 import ServicesList from "@/components/services/list";
+import WorkshopList from "@/components/workshops/workshop-list";
 
 export default function Home() {
 
@@ -10,6 +11,14 @@ export default function Home() {
     {name: 'service3', description: 'desc3', image: ''},
     {name: 'service4', description: 'desc4', image: ''},
     {name: 'service5', description: 'desc5', image: ''},
+  ]
+
+  const workshops = [
+    {name: 'workshop1', description: 'des1', image: '', id:1},
+    {name: 'workshop2', description: 'des2', image: '', id:2},
+    {name: 'workshop3', description: 'des3', image: '', id:3},
+    {name: 'workshop4', description: 'des4', image: '', id:4},
+
   ]
 
 
@@ -51,6 +60,9 @@ export default function Home() {
     </section>
 
     <ServicesList services={services}/>
+
+    <WorkshopList workshops={workshops}/>
+
     </div>
   );
 }
